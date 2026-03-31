@@ -15,7 +15,7 @@ Start a local SQL Server container with this command:
 
 ```bash
 docker run -e "ACCEPT_EULA=Y" \
--e "SA_PASSWORD=YourStrong@Pass123" \
+-e "SA_PASSWORD=YoongiMateo@Pass145" \
 -p 1433:1433 \
 --name sqlserver-lab \
 -d mcr.microsoft.com/mssql/server:2022-latest
