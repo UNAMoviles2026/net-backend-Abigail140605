@@ -54,5 +54,9 @@ public class ReservationService : IReservationService
         return await _reservationRepository.DeleteAsync(id);
     }
 
-    
+    public async Task<List<ReservationResponse>> GetByDateAsync(DateOnly date)
+    {
+        var reservations = await _reservationRepository.GetByDateAsync(date);
+        return reservations.Select(ReservationMapper.ToResponse).ToList();
+    }
 }
