@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using reservations_api.DTOs.Requests;
 using reservations_api.DTOs.Responses;
+using reservations_api.Models.Entities;
 
 namespace reservations_api.Services;
 
