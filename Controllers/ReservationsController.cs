@@ -59,4 +59,11 @@ public class ReservationsController : ControllerBase
 
         return NoContent();
     }
+
+    [HttpGet("by-date")]
+    public async Task<IActionResult> GetByDate([FromQuery] DateOnly date)
+    {
+        var reservations = await _reservationService.GetByDateAsync(date);
+        return Ok(reservations); // 200 OK with the list of reservations
+    }
 }
